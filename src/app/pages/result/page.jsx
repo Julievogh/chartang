@@ -15,6 +15,7 @@ export default async function ResultPage({ searchParams }) {
         <p>Her er: </p>
         <p>her er {data.description}</p>
         <p>Der er {data.violations.length} problemer</p>
+        <Image alt={data.url} src={data.screenshot.url} width={data.screenshot.width} height={data.screenshot.height} />
         <button type="submit">
           <Link href="/">Prøv igen</Link>
         </button>
