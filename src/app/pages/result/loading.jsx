@@ -7,9 +7,6 @@ export default function ResultPage() {
   return (
     <div>
       <h1>LOADING PAGE</h1>
-      <button type="submit">
-        <Link href="/pages/result/{id}">RESULT</Link>
-      </button>
 
       <button type="submit">
         <Link href="/pages/result">ERROR</Link>
@@ -17,3 +14,5 @@ export default function ResultPage() {
     </div>
   );
 }
+
+// tilføj noget sjovt her!!

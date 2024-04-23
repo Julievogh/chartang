@@ -8,46 +8,40 @@ import drDkData from "./json/dr_dk.json";
 import Link from "next/link";
 
 export default async function Page() {
-  // Henter data fra JSON filen dr_dk
-
-  const params = new URLSearchParams({
-    url: "https://www.charlietango.dk",
-  });
-  const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
-  const data = await response.json();
-
-  console.log(data);
-  console.log(drDkData);
-  /*
-  const params = new URLSearchParams({
-    url: drDkData.url,
-    tags: drDkData.tags,
-    "screenshot.url": drDkData.screenshot.url,
-    "screenshot.width": drDkData.screenshot.width.toString(),
-    "screenshot.height": drDkData.screenshot.height.toString(),
-  });
-
-  const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
-  const buttonSubmit = (e) => {
-    e.preventDefault();
-    Router.push("/report/placeholder");
-  };
-  const data = await response.json();
-*/
   return (
-    <main>
-      <h1 className={libre_baskerville.className}>My page is </h1>
-      <p>Hello World! This is a paragraph </p>
+    <>
+      <h1 className={libre_baskerville.className}>Test din side</h1>
+      <p>Hvordan går det med din hjemmeside?</p>
 
-      <form action="">
+      <form action="/pages/result">
         <label htmlFor="url">Indtast URL:</label>
-        <input type="text" name="url" id="url" />
-        <button type="submit">
-          <Link href="/pages/result">RESULT</Link>
-        </button>
+        <input type="url" name="url" id="url" />
+        <button type="submit">Resultat</button>
       </form>
-      <p>URL: {drDkData.url}</p>
-      <p>Tags: {drDkData.tags.join(", ")}</p>
-    </main>
+    </>
   );
 }
+
+/*
+const params = new URLSearchParams({
+  url: drDkData.url,
+  tags: drDkData.tags,
+  "screenshot.url": drDkData.screenshot.url,
+  "screenshot.width": drDkData.screenshot.width.toString(),
+  "screenshot.height": drDkData.screenshot.height.toString(),
+});
+
+const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
+const buttonSubmit = (e) => {
+  e.preventDefault();
+  Router.push("/report/placeholder");
+};
+const data = await response.json();
+
+(inde i main:)
+<p>URL: {drDkData.url}</p>
+      <p>Tags: {drDkData.tags.join(", ")}</p>
+
+      console.log(data);
+console.log(drDkData);
+*/
