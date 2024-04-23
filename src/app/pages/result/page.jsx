@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { libre_baskerville, poppins } from "../../layout";
 
 export const revalidate = 1200;
 export default async function ResultPage({ searchParams }) {
@@ -11,7 +12,7 @@ export default async function ResultPage({ searchParams }) {
   return (
     <main>
       <div>
-        <h1>RESULT FROM URL: {data.url}</h1>
+        <h1>RESULTAT AF: {data.url}</h1>
         <p>Her er: </p>
         <p>her er {data.description}</p>
         <p>Der er {data.violations.length} problemer</p>
