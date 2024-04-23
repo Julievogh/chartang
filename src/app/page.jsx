@@ -9,23 +9,18 @@ import Link from "next/link";
 export default async function Page() {
   return (
     <>
-      <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
-        Test din side
-      </h1>
-      <p>Hvordan går det med din hjemmeside?</p>
+      <div className={styles.container}>
+        <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
+          Test din side
+        </h1>
+
+        <div></div>
+        <p>Hvordan går det med din hjemmeside?</p>
+      </div>
 
       <form action="/pages/result">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.4rem",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.container}>
           <label htmlFor="url">Indtast URL:</label>
-
           <input type="url" name="url" id="url" />
           <button type="submit">Resultat</button>
         </div>
