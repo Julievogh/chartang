@@ -23,10 +23,16 @@ export default async function ResultPage({ searchParams }) {
         <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
         <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
         <p>Found {data.violations.length} issues</p>
-        <p> Beskrivelse: {data.description} </p>
+
+        {/*
+        <p> Beskrivelse: {data.violations.description} </p>
+        <p>DIn fejl er: {data.impact}</p>
+        <p>DIn fejl er: {data.violations.id}</p>
+        <p>DIn fejl er: {data.help}</p>
+  <p>DIn fejl er: {data.violations.description}</p>*/}
 
         <Image alt={data.url} src={data.screenshot.url} width={350} height={250} />
-        <button type="submit">
+        <button className="styles.btn" type="submit">
           <Link href="/">Prøv igen</Link>
         </button>
 

@@ -37,8 +37,8 @@
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  background-color: var(--colors-brand-yellow-40);
+  border: 1px solid var(--colors-brand-yellow-40), 0.3;
   border-radius: var(--border-radius);
 }
 
@@ -47,9 +47,17 @@
   margin: 0 auto;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: var(--colors-brand-orange-70);
+  background: var(--colors-brand-yellow-40);
+  border: 2px solid var(--colors-brand-orange-70);
+  margin-top: 1rem;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 .grid {

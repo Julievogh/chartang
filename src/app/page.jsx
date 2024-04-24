@@ -22,7 +22,9 @@ export default async function Page() {
         <div className={styles.container}>
           <label htmlFor="url">Indtast URL:</label>
           <input type="url" name="url" id="url" />
-          <button type="submit">Resultat</button>
+          <button className={styles.btn} type="submit">
+            Resultat
+          </button>
         </div>
       </form>
 
