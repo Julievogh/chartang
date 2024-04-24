@@ -11,10 +11,10 @@ export default function Header() {
         <div className="links">
           <Link href={"/"}>Søg</Link>
           <Link href={"/"}>Resultater</Link>
-          <Link href={"./pages/rules/page.jsx"}>Regler</Link>
+          <Link href="/pages/rules/">Regler</Link>
         </div>
       </nav>
-      <p>HEJSA</p>
+      <p>Her står der noget klogt</p>
     </header>
   );
 }

@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 import { libre_baskerville, poppins } from "./layout";
 import "./globals.css";
 import React from "react";
-
 import Link from "next/link";
+import Spinner from "./components/Spinner";
 
 export default async function Page() {
   return (
@@ -25,6 +25,8 @@ export default async function Page() {
           <button type="submit">Resultat</button>
         </div>
       </form>
+
+      <div></div>
     </>
   );
 }
