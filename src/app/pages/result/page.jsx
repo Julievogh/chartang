@@ -15,35 +15,47 @@ export default async function ResultPage({ searchParams }) {
     <main>
       <div className={styles.container}>
         <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
-          RESULTAT AF: {data.url}
+          RESULTAT AF:
         </h1>
-        <p>Tdspunkt for test: {data.timestamp}</p>
-        <p>Der er {data.violations.length} problemer</p>
-
-        <p>Der er {data.passes.length} elementer, der klarede testen</p>
-        <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
-        <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
-        <p>Der er {data.violations.length} problem</p>
-        {data.violations.map((violation, index) => {
-          return (
-            <div key={index}>
-              <h5>Beskrivelse af problem:</h5> <p> {violation.description}</p>
-              <h5>Hvad bør du gøre?:</h5> <p>{violation.help}</p>
-              <p>
-                Tjek mere her: <a href={`/pages/rules/${violation.id}`}>Læs mere</a>
-              </p>
-            </div>
-          );
-        })}
-
+        <h2>{data.url}</h2>
         <Image alt={data.url} src={data.screenshot.url} width={350} height={250} />
-        <button className="styles.btn" type="submit">
-          <Link href="/">Prøv igen</Link>
-        </button>
 
-        <button type="submit">
-          <Link href="/pages/rules">Rules</Link>
-        </button>
+        <div className={styles.description}>
+          <p>Tdspunkt for test: {data.timestamp}</p>
+
+          <p>Der er {data.passes.length} elementer, der klarede testen</p>
+          <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
+          <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
+          <p>Der er {data.violations.length} problemer</p>
+        </div>
+        <div className={styles.description3}>
+          {data.violations.map((violation, index) => {
+            return (
+              <div key={index}>
+                <h2>Problemer:</h2>
+                <h4>ID</h4> <p> {violation.id}</p>
+                <h4>Hvor særiøst?</h4> <p> {violation.impact}</p>
+                <h4>Beskrivelse af problem:</h4> <p> {violation.description}</p>
+                <h4>Hvad bør du gøre?:</h4> <p>{violation.help}</p>
+                <p>
+                  Tjek mere her:{" "}
+                  <a className={styles.btn} href={`/pages/rules/${violation.id}`}>
+                    Læs mere
+                  </a>
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className={styles.container}>
+          <button className={styles.btn2} type="submit">
+            <Link href="/">Søg igen</Link>
+          </button>
+
+          <button className={styles.btn2} type="submit">
+            <Link href="/pages/rules">Regler</Link>
+          </button>
+        </div>
         <SaveURL url={data.url} />
       </div>
     </main>

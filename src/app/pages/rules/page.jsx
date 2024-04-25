@@ -13,20 +13,44 @@ export default async function ResultPage({ searchParams }) {
   return (
     <main>
       <div className={styles.container}>
-        <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
-          REGLER
-        </h1>
-        <h3>Her er hvad vi tester:</h3>
-        <p>Problemer</p>
-        <p>Passes</p>
-        <p>Inapplicable</p>
-        <p>Incomplete</p>
-        <p>Screenshot</p>
-        <p>Prøv selv her:</p>
+        <div className={styles.description}>
+          <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
+            REGLER
+          </h1>
+          <h3>Her er hvad vi tester:</h3>
+          <h4>Region</h4>
+          <p>
+            It is best practice to contain all content excepting skip links, within distinct regions such as the header,
+            nav, main, and footer.{" "}
+          </p>
+          <a href="https://dequeuniversity.com/rules/axe/4.9/region?application=axe-puppeteer" target="_blank">
+            Læs mere
+          </a>
+          <h4>Tab Index</h4>
+          <p>
+            A tabindex attribute must never have a value greater than 0 to prevent an unexpected tab order that can give
+            the appearance of skipping some elements entirely.{" "}
+          </p>
+          <a href="https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axe-puppeteer" target="_blank">
+            Læs mere
+          </a>
+          <h4>Landmark One Main</h4>
+          <p>
+            It is a best practice to ensure that there is only one main landmark to navigate to the primary content of
+            the page and that if the page contains iframe elements, each should either contain no landmarks, or just a
+            single landmark.{" "}
+          </p>
+          <a
+            href="https://dequeuniversity.com/rules/axe/4.9/landmark-one-main?application=axe-puppeteer"
+            target="_blank"
+          >
+            Læs mere
+          </a>
 
-        <button>
-          <Link href="/">Søg her</Link>
-        </button>
+          <button className={styles.btn}>
+            <Link href="/">Søg her</Link>
+          </button>
+        </div>
       </div>
     </main>
   );

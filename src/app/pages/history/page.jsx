@@ -14,22 +14,24 @@ export default async function ResultPage({ searchParams }) {
   return (
     <main>
       <div className={styles.container}>
-        <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
-          RESULTAT AF:
-        </h1>
-        <p>Her er en liste over tidligere søgninger:</p>
+        <div className={styles.description}>
+          <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
+            RESULTAT AF:
+          </h1>
+          <h3>Her er en liste over tidligere søgninger:</h3>
 
-        <div>
-          <ShowHistory />
+          <div className={styles.space}>
+            <ShowHistory />
+          </div>
+
+          <button className={styles.btn} type="submit">
+            <Link href="/">Prøv igen</Link>
+          </button>
+
+          <button type="submit" className={styles.btn2}>
+            <Link href="/pages/rules">Rules</Link>
+          </button>
         </div>
-
-        <button className="styles.btn" type="submit">
-          <Link href="/">Prøv igen</Link>
-        </button>
-
-        <button type="submit">
-          <Link href="/pages/rules">Rules</Link>
-        </button>
       </div>
     </main>
   );
