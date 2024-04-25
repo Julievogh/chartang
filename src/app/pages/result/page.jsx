@@ -24,9 +24,9 @@ export default async function ResultPage({ searchParams }) {
         <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
         <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
         <p>Der er {data.violations.length} problem</p>
-        {data.violations.map((violation) => {
+        {data.violations.map((violation, index) => {
           return (
-            <div>
+            <div key={index}>
               <h5>Beskrivelse af problem:</h5> <p> {violation.description}</p>
               <h5>Hvad bør du gøre?:</h5> <p>{violation.help}</p>
               <p>

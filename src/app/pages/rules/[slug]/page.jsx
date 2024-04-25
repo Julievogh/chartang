@@ -27,9 +27,7 @@ export default async function RulePage({ params }) {
 
         <p>Noter: {notes}</p>
 
-        <button>
-          <a href="./">Tilbage til regler</a>
-        </button>
+        <a href="./">Tilbage til regler</a>
       </div>
     </main>
   );
