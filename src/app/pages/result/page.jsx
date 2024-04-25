@@ -27,10 +27,10 @@ export default async function ResultPage({ searchParams }) {
         {data.violations.map((violation) => {
           return (
             <div>
-              <p>Beskrivelse af problem: {violation.description}</p>
-              <p>Hvad bør du gøre?: {violation.help}</p>
+              <h5>Beskrivelse af problem:</h5> <p> {violation.description}</p>
+              <h5>Hvad bør du gøre?:</h5> <p>{violation.help}</p>
               <p>
-                Tjek mere her: <a href={`/pages/rules/${violation.id}`}>{violation.helpUrl}</a>
+                Tjek mere her: <a href={`/pages/rules/${violation.id}`}>Læs mere</a>
               </p>
             </div>
           );
