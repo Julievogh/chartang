@@ -1,0 +1,17 @@
+{
+  "region": {
+    "headline": "Region Information",
+    "explanation": "This section provides information about different regions.",
+    "notes": "These notes contain additional details about regions."
+  },
+  "tabindex": {
+    "headline": "Tab Index",
+    "explanation": "This section provides information about hats.",
+    "notes": "These notes contain additional details about hats."
+  },
+  "landmark-one-main": {
+    "headline": "Landmark one main",
+    "explanation": "This section provides information about earrings.",
+    "notes": "These notes contain additional details about earrings."
+  }
+}

@@ -10,7 +10,7 @@ export default function Header() {
         <h1 className="styles.container">navbar</h1>
         <div className="links">
           <Link href={"/"}>Søg</Link>
-          <Link href={"/"}>Resultater</Link>
+          <Link href={"/pages/history/"}>Resultater</Link>
           <Link href="/pages/rules/">Regler</Link>
         </div>
       </nav>

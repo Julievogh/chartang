@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../page.module.css";
 import { libre_baskerville, poppins } from "../../layout";
+import SaveURL from "./SaveURL";
 
 export const revalidate = 1200;
 export default async function ResultPage({ searchParams }) {
@@ -22,14 +23,18 @@ export default async function ResultPage({ searchParams }) {
         <p>Der er {data.passes.length} elementer, der klarede testen</p>
         <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
         <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
-        <p>Found {data.violations.length} issues</p>
-
-        {/*
-        <p> Beskrivelse: {data.violations.description} </p>
-        <p>DIn fejl er: {data.impact}</p>
-        <p>DIn fejl er: {data.violations.id}</p>
-        <p>DIn fejl er: {data.help}</p>
-  <p>DIn fejl er: {data.violations.description}</p>*/}
+        <p>Der er {data.violations.length} problem</p>
+        {data.violations.map((violation) => {
+          return (
+            <div>
+              <p>Beskrivelse af problem: {violation.description}</p>
+              <p>Hvad bør du gøre?: {violation.help}</p>
+              <p>
+                Tjek mere her: <a href={`/pages/rules/${violation.id}`}>{violation.helpUrl}</a>
+              </p>
+            </div>
+          );
+        })}
 
         <Image alt={data.url} src={data.screenshot.url} width={350} height={250} />
         <button className="styles.btn" type="submit">
@@ -39,6 +44,7 @@ export default async function ResultPage({ searchParams }) {
         <button type="submit">
           <Link href="/pages/rules">Rules</Link>
         </button>
+        <SaveURL url={data.url} />
       </div>
     </main>
   );
