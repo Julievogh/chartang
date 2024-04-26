@@ -21,7 +21,7 @@ export default async function ResultPage({ searchParams }) {
           <h4>Region</h4>
           <p>
             It is best practice to contain all content excepting skip links, within distinct regions such as the header,
-            nav, main, and footer.{" "}
+            nav, main, and footer.
           </p>
 
           <h4>Notes</h4>
@@ -35,7 +35,7 @@ export default async function ResultPage({ searchParams }) {
           <h4>Tab Index</h4>
           <p>
             A tabindex attribute must never have a value greater than 0 to prevent an unexpected tab order that can give
-            the appearance of skipping some elements entirely.{" "}
+            the appearance of skipping some elements entirely.
           </p>
           <h4>Notes</h4>
           <p>
