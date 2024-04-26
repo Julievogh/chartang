@@ -34,7 +34,7 @@ export default async function ResultPage({ searchParams }) {
               <div key={index}>
                 <h2>Problemer:</h2>
                 <h4>ID</h4> <p> {violation.id}</p>
-                <h4>Hvor særiøst?</h4> <p> {violation.impact}</p>
+                <h4>Hvor seriøst?</h4> <p> {violation.impact}</p>
                 <h4>Beskrivelse af problem:</h4> <p> {violation.description}</p>
                 <h4>Hvad bør du gøre?:</h4> <p>{violation.help}</p>
                 <p>
