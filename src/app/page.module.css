@@ -33,6 +33,13 @@
   background-color: var(--colors-brand-yellow-40);
   margin: 0.8rem;
   padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .description a {
@@ -42,6 +49,17 @@
   gap: 0.5rem;
 }
 .description h1 {
+  justify-self: center;
+  align-self: center;
+  margin-top: 10px;
+}
+.description h2 {
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.description Image {
   justify-self: center;
   align-self: center;
 }

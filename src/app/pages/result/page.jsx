@@ -14,19 +14,22 @@ export default async function ResultPage({ searchParams }) {
   return (
     <main>
       <div className={styles.container}>
-        <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
-          RESULTAT AF:
-        </h1>
-        <h2>{data.url}</h2>
-        <Image alt={data.url} src={data.screenshot.url} width={450} height={300} />
-
         <div className={styles.description}>
-          <p>Tdspunkt for test: {data.timestamp}</p>
+          <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
+            RESULTAT AF:
+          </h1>
+          <h2>{data.url}</h2>
+          <div className={styles.imageContainer}>
+            <Image alt={data.url} src={data.screenshot.url} width={450} height={300} />
+          </div>
+          <div>
+            <p>Tdspunkt for test: {data.timestamp}</p>
 
-          <p>Der er {data.passes.length} elementer, der klarede testen</p>
-          <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
-          <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
-          <p>Der er {data.violations.length} problemer</p>
+            <p>Der er {data.passes.length} elementer, der klarede testen</p>
+            <p>Der er {data.incomplete.length} elementer der bør testes mere grundigt</p>
+            <p>Der er {data.inapplicable.length} elementer der ikke kunne testes</p>
+            <p>Der er {data.violations.length} problemer</p>
+          </div>
         </div>
         <div className={styles.description3}>
           {data.violations.map((violation, index) => {
