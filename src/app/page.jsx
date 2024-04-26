@@ -12,14 +12,7 @@ export default async function Page() {
       <div className={styles.container}>
         <div>
           {" "}
-          <Image
-            src="/DiversaIcon.svg"
-            alt="Vercel Logo"
-            className="dark:invert"
-            width={100}
-            height={24}
-            priority
-          />{" "}
+          <Image src="/diversa.svg" alt="Logo" width={100} height={24} priority />{" "}
         </div>
         <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
           Test din side
