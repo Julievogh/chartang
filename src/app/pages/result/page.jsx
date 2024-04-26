@@ -18,7 +18,7 @@ export default async function ResultPage({ searchParams }) {
           RESULTAT AF:
         </h1>
         <h2>{data.url}</h2>
-        <Image alt={data.url} src={data.screenshot.url} width={350} height={250} />
+        <Image alt={data.url} src={data.screenshot.url} width={450} height={300} />
 
         <div className={styles.description}>
           <p>Tdspunkt for test: {data.timestamp}</p>

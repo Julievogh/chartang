@@ -21,14 +21,14 @@ export default async function ResultPage({ searchParams }) {
           <h3>Her er hvad vi tester:</h3>
           <h4>Region</h4>
           <p>
-            It is best practice to contain all content excepting skip links, within distinct regions such as the header,
-            nav, main, and footer.
+            Det er bedste praksis at indeholde al indhold undtagen overspringelseslinks inden for forskellige regioner
+            såsom header, navigationsmenu, hovedindhold og sidefod.
           </p>
 
-          <h4>Notes</h4>
+          <h4>Noter</h4>
           <p>
             {
-              "It is best practice to contain all content excepting skip links, within distinct regions such as the header, nav, main, and footer. "
+              "Det er bedste praksis at indeholde al indhold undtagen overspringelseslinks inden for forskellige regioner såsom header, navigationsmenu, hovedindhold og sidefod."
             }
           </p>
           <a href="https://dequeuniversity.com/rules/axe/4.9/region?application=axe-puppeteer" target="_blank">
@@ -36,13 +36,13 @@ export default async function ResultPage({ searchParams }) {
           </a>
           <h4>Tab Index</h4>
           <p>
-            A tabindex attribute must never have a value greater than 0 to prevent an unexpected tab order that can give
-            the appearance of skipping some elements entirely.
+            En tabindex-attribut må aldrig have en værdi større end 0 for at forhindre en uventet tabulering, der kan få
+            det til at se ud som om, at visse elementer helt springes over.
           </p>
-          <h4>Notes</h4>
+          <h4>Noter</h4>
           <p>
             {
-              "A tabindex attribute must never have a value greater than 0 to prevent an unexpected tab order that can give the appearance of skipping some elements entirely. "
+              "En tabindex-attribut må aldrig have en værdi større end 0 for at forhindre en uventet tabulering, der kan få det til at se ud som om, at visse elementer helt springes over."
             }
           </p>
           <a href="https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axe-puppeteer" target="_blank">
@@ -50,14 +50,14 @@ export default async function ResultPage({ searchParams }) {
           </a>
           <h4>Landmark One Main</h4>
           <p>
-            It is a best practice to ensure that there is only one main landmark to navigate to the primary content of
-            the page and that if the page contains iframe elements, each should either contain no landmarks, or just a
-            single landmark.
+            Det er bedste praksis at sikre, at der kun er én hovedlandmark for at navigere til primært indhold på siden,
+            og at hvis siden indeholder iframe-elementer, bør hver af disse enten ikke indeholde nogen landmærker eller
+            kun et enkelt landmærke.
           </p>
-          <h4>Notes</h4>
+          <h4>Noter</h4>
           <p>
             {
-              "It is a best practice to ensure that there is only one main landmark to navigate to the primary content of the page and that if the page contains iframe elements, each should either contain no landmarks, or just a single landmark. "
+              "Det er bedste praksis at sikre, at der kun er én hovedlandmark for at navigere til primært indhold på siden, og at hvis siden indeholder iframe-elementer, bør hver af disse enten ikke indeholde nogen landmærker eller kun et enkelt landmærke."
             }
           </p>
           <a

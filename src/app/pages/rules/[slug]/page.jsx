@@ -1,4 +1,5 @@
 import rules from "../json/rules.json";
+import styles from "../../../page.module.css";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -20,14 +21,17 @@ export default async function RulePage({ params }) {
 
   return (
     <main>
-      <div>
-        <h1 className="text-3xl">My name is {headline}</h1>
+      <div className={styles.container}>
+        <div className={styles.description}>
+          <h1 className="text-3xl">{headline}</h1>
 
-        <p>Forklaring: {explanation}</p>
+          <h4>Forklaring: </h4>
+          <p>{explanation}</p>
+          <h4>Noter: </h4>
+          <p> {notes}</p>
 
-        <p>Noter: {notes}</p>
-
-        <a href="./">Tilbage til regler</a>
+          <a href="./">Tilbage til regler</a>
+        </div>
       </div>
     </main>
   );
