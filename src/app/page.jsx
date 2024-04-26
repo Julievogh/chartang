@@ -10,11 +10,21 @@ export default async function Page() {
   return (
     <>
       <div className={styles.container}>
+        <div>
+          {" "}
+          <Image
+            src="/diversaIcon.svg"
+            alt="Vercel Logo"
+            className="dark:invert"
+            width={100}
+            height={24}
+            priority
+          />{" "}
+        </div>
         <h1 className={libre_baskerville.className} style={{ color: "var(--colors-brand-turquoise-50)" }}>
           Test din side
         </h1>
 
-        <div></div>
         <p>Hvordan går det med din hjemmeside?</p>
       </div>
 
