@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header>
-      <Image src="/diversa.svg" alt="Logo" width={100} height={24} priority />{" "}
+      <Image src="/DiversaIcon.svg" alt="Logo" width={100} height={24} priority />{" "}
       <nav>
         <h1 className={styles.container}>Diversa</h1>
 
