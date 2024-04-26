@@ -13,7 +13,7 @@ export default async function Page() {
         <div>
           {" "}
           <Image
-            src="/diversaIcon.svg"
+            src="/DiversaIcon.svg"
             alt="Vercel Logo"
             className="dark:invert"
             width={100}
